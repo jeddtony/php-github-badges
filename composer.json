@@ -9,10 +9,15 @@
             "email": "jedtony.jt@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "phpunit/phpunit": "^8.5"
+    },
     "autoload": {
         "psr-4": {
-            "JeddTony\\GithubBadges\\": "src/"
+            "JeddTony\\GithubBadge\\": "src/"
         }
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.0"
     }
 }
