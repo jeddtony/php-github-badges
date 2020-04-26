@@ -1,6 +1,6 @@
 <?php
 
-namespace JeddTony\GithubBadge;
+namespace Jeddtony\GithubBadge;
 
 use Symfony\Component\HttpKernel\DependencyInjection\ServicesResetter;
 
@@ -13,7 +13,7 @@ class GithubBadgesServiceProvider extends ServicesResetter {
     public function register() {
         $this->app->bind('github-badges', function() {
             return new GithubBadgeFactory();
-        })
+        });
     }
 
 }

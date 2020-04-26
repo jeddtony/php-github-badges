@@ -10,14 +10,25 @@
         }
     ],
     "require": {
-        "phpunit/phpunit": "^8.5"
+       
     },
     "autoload": {
         "psr-4": {
-            "JeddTony\\GithubBadge\\": "src/"
+            "Jeddtony\\GithubBadge\\": "src/"
         }
     },
     "require-dev": {
-        "orchestra/testbench": "~3.0"
+        "orchestra/testbench": "~3.0",
+        "phpunit/phpunit": "^8.5"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jeddtony\\GithubBadge\\GithubBadgeServiceProvider"
+            ],
+            "aliases": {
+                "GithubBadge": "Jeddtony\\GithubBadge\\Facade\\GithubBadge"
+            }
+        }
     }
 }
