@@ -2,12 +2,17 @@
 
 namespace Jeddtony\GithubBadge;
 
-use Symfony\Component\HttpKernel\DependencyInjection\ServicesResetter;
+use Illuminate\Support\ServiceProvider;
+use Jeddtony\GithubBadge\Console\GithubBadge;
 
-class GithubBadgesServiceProvider extends ServicesResetter {
+class GithubBadgeServiceProvider extends ServiceProvider {
 
     public function boot () {
-
+        if($this->app->runningInConsole()) {
+            $this->commands([
+                 GithubBadge::class
+            ]);
+        }
     }
 
     public function register() {
