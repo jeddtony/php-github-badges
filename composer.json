@@ -1,0 +1,18 @@
+{
+    "name": "jeddtony/github-badges",
+    "description": "Get github badges via artisan commands",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jeddtony",
+            "email": "jedtony.jt@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "JeddTony\\GithubBadges\\": "src/"
+        }
+    }
+}
